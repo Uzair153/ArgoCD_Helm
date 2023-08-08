@@ -1,7 +1,7 @@
 replicaCount: 1
 
 ConfigMap:
-  name: mongo-configmap
+  name: mongo-express-configmap
   data:
     database_url: mongodb-service
 
