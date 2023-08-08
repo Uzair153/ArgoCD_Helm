@@ -1,0 +1,16 @@
+replicaCount: 1
+
+secrets:
+  name: mongodb-secret
+  type: Opaque
+  data:
+    mongorootusername: dXNlcm5hbWU=
+    mongorootpassword: cGFzc3dvcmQ=
+
+deployment:
+  metadata:
+    name: mongo-db
+    labels:
+      app: mongo-db
+
+image: mongo

@@ -1,0 +1,18 @@
+replicaCount: 1
+
+ConfigMap:
+  name: mongo-configmap
+  data:
+    database_url: mongodb-service
+
+deployment:
+  metadata:
+    name: mongo-express
+    labels:
+      app: mongo-express
+  spec:
+    containers:
+    - name: mongo-express
+      image: mongo-express
+      ports:
+      - containerPort: 8081
